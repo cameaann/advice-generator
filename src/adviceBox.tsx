@@ -11,6 +11,7 @@ function AdviceBox() {
         reiciendis enim repudiandae.
       </div>
       <div className="advice-decoration"></div>
+      <button className="btn-dice"></button>
     </div>
   );
 }

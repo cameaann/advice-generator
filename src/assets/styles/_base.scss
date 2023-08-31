@@ -44,6 +44,7 @@ html{
 }
 
 .advice{
+    position: relative;
     background-color: $darkGrayishBlue;
     width:54rem;
     // height:36.4rem;
@@ -99,13 +100,17 @@ html{
             background: url('../img/pattern-divider-mobile.svg'), no-repeat ;
             background-position: 50% 0;
         }
-
-        // @include response(phone-mini){
-        //     width:29.5rem;
-        //     height:2.2rem;
-        //     background: url('../img/pattern-divider-mobile.svg'), no-repeat ;
-        //     background-position: 50% 0;
-
-        // }
     }
+}
+.btn-dice{
+    width: 6.4rem;
+    height: 6.4rem;
+    border-radius: 50%;
+    background-color: $neongreen;
+    position: absolute;
+    top:93%;
+    display: flex;
+    background-image: url("../img/icon-dice.svg");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
 }
