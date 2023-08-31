@@ -1,0 +1,111 @@
+@import "./mixin.scss";
+@import "./variables.scss";
+
+*,
+*::after,
+*::before
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+    font-family: 'Manrope', 'san serif';
+    font-size: 10rem;
+}
+
+html{
+     // 1rem = 10px    10px/16px=62.5% width 1200-1800px
+     font-size: 62.5%;
+
+     @include response(tab-land){ //width<1200px
+         font-size: 56.25%; //1rem=9px 9px/16px=56.25%
+     }
+     @include response(tab-port){ //width<900px
+         font-size: 50%; //1rem=8px 8px/16px=50%
+     }
+     @include response(phone){
+         font-size: 44%; //1rem=7px 7px/16px=44%
+     }
+     @include response(big-desktop){ //width> 1800px
+         font-size: 75%; //1rem=12px 12/16=75%
+     }
+}
+
+
+.main-container{
+    background-color: $darkBlue;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include response(phone-mini){
+        // padding: 1.6rem;
+    }
+}
+
+.advice{
+    background-color: $darkGrayishBlue;
+    width:54rem;
+    // height:36.4rem;
+    color: $lightcyan;
+    display: flex;
+    flex-direction: column;
+    font-size: 2.8rem;
+    align-items: center;
+    padding: 9rem 4.8rem;
+    border-radius: 1.5rem;
+
+    @include response(phone){
+        width:34.3rem;
+        font-size: 2.4rem;
+    }
+
+    @include response(phone-mini){
+        padding-left: 2.4rem;
+        padding-right: 2.4rem;
+    }
+
+    &-header{
+        text-transform: uppercase;
+        color: $neongreen;
+        font-size: 1.1rem;
+        width:800;
+        margin-bottom: 2.4rem;
+    }
+    &-text{
+        font-size: 2.4rem;
+        color: $lightcyan;
+        margin-bottom: 4rem;
+    }
+    &-decoration{
+        height:1.4rem;
+        width:44.4rem;
+        background: url('../img/pattern-divider-desktop.svg'), no-repeat;
+        background-position: 50% 0;
+        background-repeat: no-repeat;
+        fill:$lightcyan;
+
+        @include response(tab-land){
+            height:1.8rem;
+        }
+
+        @include response(tab-port){
+            height:2rem;
+        }
+
+        @include response(phone){
+            height:2.2rem;
+            width:29.5rem;
+            background: url('../img/pattern-divider-mobile.svg'), no-repeat ;
+            background-position: 50% 0;
+        }
+
+        // @include response(phone-mini){
+        //     width:29.5rem;
+        //     height:2.2rem;
+        //     background: url('../img/pattern-divider-mobile.svg'), no-repeat ;
+        //     background-position: 50% 0;
+
+        // }
+    }
+}
