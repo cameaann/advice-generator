@@ -8,8 +8,10 @@ export function useFetchAdvice() {
   };
 
   const [advice, setAdvice] = useState<Advice>();
+  const [isLoading, setIsLoading] = useState(false);
 
   const loadAdvice = () => {
+    setIsLoading(true);
     return fetch("https://api.adviceslip.com/advice")
       .then((response) => response.json())
       .then((data) => {
@@ -18,6 +20,7 @@ export function useFetchAdvice() {
           text: data.slip.advice,
         };
         setAdvice(advice);
+        setIsLoading(false);
       });
   };
 
@@ -25,5 +28,5 @@ export function useFetchAdvice() {
     loadAdvice();
   }, []);
 
-  return { advice, loadAdvice };
+  return { advice, isLoading, loadAdvice };
 }
