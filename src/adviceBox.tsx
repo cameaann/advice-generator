@@ -1,13 +1,12 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { useFetchAdvice } from "./hooks/useFetchAdvice";
 
 function AdviceBox() {
-  const [advice] = useFetchAdvice();
+  const { advice, loadAdvice } = useFetchAdvice();
 
-  useEffect(() => {
-  }, []);
-
-  const handleClick = async () => {};
+  const handleClick = async () => {
+    loadAdvice();
+  };
 
   return (
     <div className="advice">

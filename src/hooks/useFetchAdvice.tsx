@@ -9,7 +9,7 @@ export function useFetchAdvice() {
 
   const [advice, setAdvice] = useState<Advice>();
 
-  const fetchData = () => {
+  const loadAdvice = () => {
     return fetch("https://api.adviceslip.com/advice")
       .then((response) => response.json())
       .then((data) => {
@@ -22,8 +22,8 @@ export function useFetchAdvice() {
   };
 
   useEffect(() => {
-    fetchData();
+    loadAdvice();
   }, []);
 
-  return [advice];
+  return { advice, loadAdvice };
 }
