@@ -3,12 +3,6 @@ import { useEffect, useState } from "react";
 
 
 export function useFetchAdvice() {
-    // creating a schema for strings
-    // const Advice = z.object({
-    //     message: z.string(),
-    //     index: z.number()
-
-    //   });
 
     //   const fetchData = () => {
     //     return fetch("https://api.adviceslip.com/advice")

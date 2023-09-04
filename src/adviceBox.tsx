@@ -2,19 +2,10 @@ import React, { useEffect, useState } from "react";
 import { useFetchAdvice } from "./hooks/useFetchAdvice";
 
 function AdviceBox() {
-  // const [advice, setAdvice] = useState<{ message: string; index: number }>();
-  const [ advice ] = useState({
-      id: 1,
-      text: "my advice"
-  });
-  //useFetchAdvice();
+  const [advice] = useFetchAdvice();
 
   useEffect(() => {
-  //   const item = useFetchAdvice;
-  //   setAdvice(item);
-  //   console.log(item);
   }, []);
-  // console.log(item);
 
   const handleClick = async () => {};
 
