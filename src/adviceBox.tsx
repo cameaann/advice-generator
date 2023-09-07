@@ -11,7 +11,9 @@ function AdviceBox() {
     <div className="advice">
       {
         isLoading
-        ? <div>IS LOADING</div>
+        ? <div className="advice-loader">
+            <div className="loader"></div>
+        </div>
         : <>
           <h1 className="advice-header">Advice # {advice?.id} </h1>
           <div className="advice-text">{advice?.advice}</div>
