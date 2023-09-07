@@ -20,6 +20,9 @@
     "noEmit": true,
     "jsx": "react-jsx"
   },
+  "rules":{
+      "react-hooks/exhaustive-deps":0
+  },
   "include": [
     "src"
   ]
