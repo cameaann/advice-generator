@@ -30,7 +30,7 @@ export function useFetchAdvice() {
 
   useEffect(() => {
     loadAdvice();
-  }, []);
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   return { advice, isLoading, loadAdvice };
 }

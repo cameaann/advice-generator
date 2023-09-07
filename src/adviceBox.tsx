@@ -9,16 +9,18 @@ function AdviceBox() {
 
   return (
     <div className="advice">
-      {
-        isLoading
-        ? <div className="advice-loader">
-            <div className="loader"></div>
+      {isLoading ? (
+        <div className="advice-loader">
+          <div className="loader"></div>
         </div>
-        : <>
-          <h1 className="advice-header" id="advice">Advice # {advice?.id} </h1>
+      ) : (
+        <>
+          <h1 className="advice-header" id="advice">
+            Advice # {advice?.id}{" "}
+          </h1>
           <div className="advice-text">{advice?.advice}</div>
         </>
-      }
+      )}
       <div className="advice-decoration"></div>
       <button type="button" className="btn-dice" onClick={handleClick}></button>
     </div>
