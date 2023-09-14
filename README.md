@@ -47,7 +47,7 @@ Users should be able to:
 ### What I learned
 
 I started learning Typscript.
-
+It was useful for me to revise how to fetch data from rest api but it was quite difficult to understand how to make the custom hook to work in the other component.
 
 ## Author
 
