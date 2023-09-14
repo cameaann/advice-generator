@@ -22,7 +22,7 @@ function AdviceBox() {
         </>
       )}
       <div className="advice-decoration"></div>
-      <button type="button" className="btn-dice" onClick={handleClick}></button>
+      <button type="button" className="btn-dice" aria-label="Get advice" onClick={handleClick}></button>
     </div>
   );
 }
